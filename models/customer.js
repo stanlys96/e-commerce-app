@@ -12,6 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       Customer.hasMany(models.Order, { foreignKey: 'CustomerId' });
+      Customer.belongsToMany(models.Product, { through: models.ProductCustomer });
     }
   };
   Customer.init({
@@ -21,10 +22,21 @@ module.exports = (sequelize, DataTypes) => {
     phone_number: DataTypes.STRING,
     username: DataTypes.STRING,
     password: DataTypes.STRING,
-    gender: DataTypes.STRING
+    gender: DataTypes.STRING,
+    unique_code: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Customer',
   });
+
+  Customer.beforeCreate((user, options) => {
+    let randomNumber1 = Math.ceil(Math.random() * 10000);
+    let randomNumber2 = Math.ceil(Math.random() * 10000);
+    let words = ['lion', 'tiger', 'sky', 'skyfall', 'stars', 'elephant', 'bottle'];
+    let randomNumber3 = words.length - 1;
+    let uniqueCode = `${randomNumber1} ${words[randomNumber3]} ${randomNumber2}`;
+    user.unique_code = uniqueCode.split(' ').join('_');
+  });
+
   return Customer;
 };
