@@ -1,0 +1,34 @@
+<%- include('./partials/top.ejs') %>
+<section id="products">
+  <div class="container">
+    <h1>Our Products</h1>
+    <table class="table table-hover text-center">
+      <thead class="bg-primary text-light">
+          <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Type</th>
+              <th>Action</th>
+          </tr>
+      </thead>
+      <tbody>
+        <% products.forEach((product, index) => { %>
+          <tr>
+            <td><%= index + 1 %></td>
+            <td><%= product.name %></td>
+            <td><%= formatPrice(product.price) %></td>
+            <td><%= product.quantity %></td>
+            <td><%= product.type %></td>
+            <td>
+              <a href="#" class="btn btn-info">Details</a>
+              <a href="#" class="btn btn-success">Add To Cart</a>
+            </td>
+          </tr>
+        <% }) %>
+      </tbody>  
+  </table>
+  </div>
+</section>
+<%- include('./partials/bottom.ejs') %>

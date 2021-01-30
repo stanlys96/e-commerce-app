@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Engage E-Series Boxing Gloves",
+    "price": 800000,
+    "quantity": 50,
+    "type": "fight_gear"
+  },
+  {
+    "name": "Engage Higher Lion MMA Grappling Shorts",
+    "price": 500000,
+    "quantity": 75,
+    "type": "fight_wear"
+  },
+  {
+    "name": "Engage Leopard MMA Grappling Shorts",
+    "price": 350000,
+    "quantity": 45,
+    "type": "fight_wear"
+  },
+  {
+    "name": "Modern Day Gladiator Brad Quake Riddell Boxing Gloves",
+    "price": 1000000,
+    "quantity": 80,
+    "type": "fight_gear"
+  },
+  {
+    "name": "Israel Adesanya 100 Wins Tee",
+    "price": 200000,
+    "quantity": 90,
+    "type": "apparel"
+  },
+  {
+    "name": "Alex Volkanovski Fight Island Supporter Tee",
+    "price": 400000,
+    "quantity": 65,
+    "type": "apparel"
+  }
+]
