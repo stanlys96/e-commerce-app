@@ -7,10 +7,10 @@ const mid = (req, res, next) => {
   if (req.session.userId) {
     next();
   } else {
-    res.redirect('/login');
+    res.redirect('/');
   }
 }
 
-router.get('/', mid, Controller.getCustomerDetails);
+router.get('/', mid, Controller.getLogout);
 
 module.exports = router;

@@ -11,6 +11,6 @@ const mid = (req, res, next) => {
   }
 }
 
-router.get('/', mid, Controller.getCustomerDetails);
+router.get('/', mid, Controller.getShoppingCartPage);
 
 module.exports = router;

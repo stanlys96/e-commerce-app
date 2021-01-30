@@ -46,6 +46,13 @@ body {
   text-align: center;
 }
 
+/* Customer Details */
+
+#customerDetails .table2 td {
+  width: 33%;
+  justify-content: center;
+}
+
 /* Footer */
 
 footer nav {

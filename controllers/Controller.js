@@ -51,6 +51,18 @@ class Controller {
   static getLoginPage(req, res) {
     res.render('login');
   }
+
+  static getCustomerDetails(req, res) {
+    res.render('customerDetails');
+  }
+
+  static getShoppingCartPage(req, res) {
+    res.render('shoppingCart');
+  }
+
+  static getLogout(req, res) {
+
+  }
 }
 
 module.exports = Controller;
